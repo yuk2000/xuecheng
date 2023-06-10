@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c8707cb-c567-41f4-96fd-85088059b0b2" name="Changes" comment="提交.gitignore文件">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+    <list default="true" id="2c8707cb-c567-41f4-96fd-85088059b0b2" name="Changes" comment="创建工程和配置环境">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -39,7 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="dev01" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,6 +51,7 @@
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\apache-maven-3.8.3\.m2\repository" />
         <option name="mavenHome" value="$PROJECT_DIR$/../../../apache-maven-3.8.3" />
+        <option name="useMavenConfig" value="true" />
         <option name="userSettingsFile" value="D:\apache-maven-3.8.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -82,10 +82,43 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java\Git\xuecheng-github\xuecheng-plus-content" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.XuechengPlusBaseApplication">
     <configuration name="XuechengPlusBaseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="xuecheng-plus-base" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.xuecheng.XuechengPlusBaseApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XuechengPlusContentApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="xuecheng-plus-content-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xuecheng.XuechengPlusContentApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XuechengPlusContentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="xuecheng-plus-content" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xuecheng.XuechengPlusContentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XuechengPlusContentModelApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="xuecheng-plus-content-model" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xuecheng.XuechengPlusContentModelApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XuechengPlusContentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="xuecheng-plus-content-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xuecheng.XuechengPlusContentServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,6 +142,7 @@
       <workItem from="1686318041562" duration="101000" />
       <workItem from="1686318156874" duration="493000" />
       <workItem from="1686318672714" duration="372000" />
+      <workItem from="1686361143562" duration="4481000" />
     </task>
     <task id="LOCAL-00001" summary="提交.gitignore文件">
       <created>1686312945041</created>
