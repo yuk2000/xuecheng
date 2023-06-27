@@ -1,0 +1,44 @@
+2023-06-15 22:00:00,443 DEBUG [http-nio-63040-exec-5][LogFormatUtils.java:91] - GET "/content/courseTeacher/list/1", parameters={}
+2023-06-15 22:00:00,443 DEBUG [http-nio-63040-exec-5][LogFormatUtils.java:91] - GET "/content/courseTeacher/list/1", parameters={}
+2023-06-15 22:00:00,485 DEBUG [http-nio-63040-exec-5][AbstractHandlerMapping.java:415] - Mapped to com.xuecheng.content.api.CourseTeacherController#findTeacher(Long)
+2023-06-15 22:00:00,485 DEBUG [http-nio-63040-exec-5][AbstractHandlerMapping.java:415] - Mapped to com.xuecheng.content.api.CourseTeacherController#findTeacher(Long)
+2023-06-15 22:00:00,490 DEBUG [http-nio-63040-exec-5][Logger.java:49] - Creating a new SqlSession
+2023-06-15 22:00:00,490 DEBUG [http-nio-63040-exec-5][Logger.java:49] - Creating a new SqlSession
+2023-06-15 22:00:00,490 DEBUG [http-nio-63040-exec-5][Logger.java:49] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@23097f04] was not registered for synchronization because synchronization is not active
+2023-06-15 22:00:00,490 DEBUG [http-nio-63040-exec-5][Logger.java:49] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@23097f04] was not registered for synchronization because synchronization is not active
+2023-06-15 22:00:00,490 DEBUG [http-nio-63040-exec-5][DataSourceUtils.java:115] - Fetching JDBC Connection from DataSource
+2023-06-15 22:00:00,490 DEBUG [http-nio-63040-exec-5][DataSourceUtils.java:115] - Fetching JDBC Connection from DataSource
+2023-06-15 22:00:00,492 DEBUG [http-nio-63040-exec-5][Logger.java:49] - JDBC Connection [HikariProxyConnection@657911741 wrapping com.mysql.cj.jdbc.ConnectionImpl@4558d97e] will not be managed by Spring
+2023-06-15 22:00:00,492 DEBUG [http-nio-63040-exec-5][Logger.java:49] - JDBC Connection [HikariProxyConnection@657911741 wrapping com.mysql.cj.jdbc.ConnectionImpl@4558d97e] will not be managed by Spring
+2023-06-15 22:00:00,492 DEBUG [http-nio-63040-exec-5][BaseJdbcLogger.java:137] - ==>  Preparing: SELECT * FROM course_teacher ct WHERE ct.course_id = ?
+2023-06-15 22:00:00,492 DEBUG [http-nio-63040-exec-5][BaseJdbcLogger.java:137] - ==>  Preparing: SELECT * FROM course_teacher ct WHERE ct.course_id = ?
+2023-06-15 22:00:00,492 DEBUG [http-nio-63040-exec-5][BaseJdbcLogger.java:137] - ==> Parameters: 1(Long)
+2023-06-15 22:00:00,492 DEBUG [http-nio-63040-exec-5][BaseJdbcLogger.java:137] - ==> Parameters: 1(Long)
+2023-06-15 22:00:00,495 DEBUG [http-nio-63040-exec-5][BaseJdbcLogger.java:137] - <==      Total: 4
+2023-06-15 22:00:00,495 DEBUG [http-nio-63040-exec-5][BaseJdbcLogger.java:137] - <==      Total: 4
+2023-06-15 22:00:00,495 DEBUG [http-nio-63040-exec-5][Logger.java:49] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@23097f04]
+2023-06-15 22:00:00,495 DEBUG [http-nio-63040-exec-5][Logger.java:49] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@23097f04]
+2023-06-15 22:00:00,496 DEBUG [http-nio-63040-exec-5][AbstractMessageConverterMethodProcessor.java:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-06-15 22:00:00,496 DEBUG [http-nio-63040-exec-5][AbstractMessageConverterMethodProcessor.java:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-06-15 22:00:00,496 DEBUG [http-nio-63040-exec-5][LogFormatUtils.java:91] - Writing [[CourseTeacher(id=31, courseId=1, teacherName=22, position=22, introduction=, photograph=null, creat (truncated)...]
+2023-06-15 22:00:00,496 DEBUG [http-nio-63040-exec-5][LogFormatUtils.java:91] - Writing [[CourseTeacher(id=31, courseId=1, teacherName=22, position=22, introduction=, photograph=null, creat (truncated)...]
+2023-06-15 22:00:00,498 DEBUG [http-nio-63040-exec-5][FrameworkServlet.java:1131] - Completed 200 OK
+2023-06-15 22:00:00,498 DEBUG [http-nio-63040-exec-5][FrameworkServlet.java:1131] - Completed 200 OK
+2023-06-15 22:00:05,506 DEBUG [http-nio-63040-exec-6][LogFormatUtils.java:91] - DELETE "/content/courseTeacher/course/1/21", parameters={}
+2023-06-15 22:00:05,506 DEBUG [http-nio-63040-exec-6][LogFormatUtils.java:91] - DELETE "/content/courseTeacher/course/1/21", parameters={}
+2023-06-15 22:00:05,511 DEBUG [http-nio-63040-exec-6][AbstractHandlerMapping.java:415] - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2023-06-15 22:00:05,511 DEBUG [http-nio-63040-exec-6][AbstractHandlerMapping.java:415] - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2023-06-15 22:00:05,515 DEBUG [http-nio-63040-exec-6][ResourceHttpRequestHandler.java:487] - Resource not found
+2023-06-15 22:00:05,515 DEBUG [http-nio-63040-exec-6][ResourceHttpRequestHandler.java:487] - Resource not found
+2023-06-15 22:00:05,515 DEBUG [http-nio-63040-exec-6][FrameworkServlet.java:1131] - Completed 404 NOT_FOUND
+2023-06-15 22:00:05,515 DEBUG [http-nio-63040-exec-6][FrameworkServlet.java:1131] - Completed 404 NOT_FOUND
+2023-06-15 22:00:05,524 DEBUG [http-nio-63040-exec-6][LogFormatUtils.java:91] - "ERROR" dispatch for DELETE "/content/error", parameters={}
+2023-06-15 22:00:05,524 DEBUG [http-nio-63040-exec-6][LogFormatUtils.java:91] - "ERROR" dispatch for DELETE "/content/error", parameters={}
+2023-06-15 22:00:05,528 DEBUG [http-nio-63040-exec-6][AbstractHandlerMapping.java:415] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-06-15 22:00:05,528 DEBUG [http-nio-63040-exec-6][AbstractHandlerMapping.java:415] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-06-15 22:00:05,538 DEBUG [http-nio-63040-exec-6][AbstractMessageConverterMethodProcessor.java:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-06-15 22:00:05,538 DEBUG [http-nio-63040-exec-6][AbstractMessageConverterMethodProcessor.java:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-06-15 22:00:05,539 DEBUG [http-nio-63040-exec-6][LogFormatUtils.java:91] - Writing [{timestamp=Thu Jun 15 22:00:05 CST 2023, status=404, error=Not Found, message=, path=/content/course (truncated)...]
+2023-06-15 22:00:05,539 DEBUG [http-nio-63040-exec-6][LogFormatUtils.java:91] - Writing [{timestamp=Thu Jun 15 22:00:05 CST 2023, status=404, error=Not Found, message=, path=/content/course (truncated)...]
+2023-06-15 22:00:05,550 DEBUG [http-nio-63040-exec-6][FrameworkServlet.java:1127] - Exiting from "ERROR" dispatch, status 404
+2023-06-15 22:00:05,550 DEBUG [http-nio-63040-exec-6][FrameworkServlet.java:1127] - Exiting from "ERROR" dispatch, status 404
