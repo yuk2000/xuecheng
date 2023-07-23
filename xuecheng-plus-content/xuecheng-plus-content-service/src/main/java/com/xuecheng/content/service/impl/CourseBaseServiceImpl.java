@@ -131,6 +131,9 @@ public class CourseBaseServiceImpl extends ServiceImpl<CourseBaseMapper, CourseB
         if(i<=0){
             throw new RuntimeException("保存课程营销信息失败");
         }
+
+
+
         //查询课程基本信息及营销信息并返回
         return getCourseBaseInfo(courseId);
 
@@ -178,6 +181,8 @@ public class CourseBaseServiceImpl extends ServiceImpl<CourseBaseMapper, CourseB
         courseBaseInfoDto.setStName(courseCategoryBySt.getName());
         CourseCategory courseCategoryByMt = courseCategoryMapper.selectById(courseBase.getMt());
         courseBaseInfoDto.setMtName(courseCategoryByMt.getName());
+
+
 
         return courseBaseInfoDto;
 

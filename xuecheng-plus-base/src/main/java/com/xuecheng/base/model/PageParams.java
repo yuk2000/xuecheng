@@ -21,7 +21,7 @@ public class PageParams {
 
     //每页记录数默认值
     @ApiModelProperty("每页记录数默认值")
-    private Long pageSize =10L;
+    private Long pageSize =40L;
 
     public PageParams(){
 

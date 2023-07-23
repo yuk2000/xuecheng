@@ -1,0 +1,502 @@
+2023-07-15 21:51:28,270 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][ServerHttpAgent.java:169] - [NACOS SocketTimeoutException httpPost] currentServerAddr: http://192.168.101.65:8848， err : connect timed out
+2023-07-15 21:51:28,282 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][ServerHttpAgent.java:189] - no available server, currentServerAddr : http://192.168.101.65:8848
+2023-07-15 21:51:28,282 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][ClientWorker.java:393] - [fixed-192.168.101.65_8848-dev402] [check-update] get changed dataId exception
+java.net.ConnectException: no available server, currentServerAddr : http://192.168.101.65:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-07-15 21:51:28,282 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][ClientWorker.java:580] - longPolling error : 
+java.net.ConnectException: no available server, currentServerAddr : http://192.168.101.65:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-07-15 21:51:28,270 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:617] - [NA] failed to request
+java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:499)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:594)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:734)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1607)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at com.alibaba.nacos.common.http.client.response.JdkHttpClientResponse.getStatusCode(JdkHttpClientResponse.java:79)
+	at com.alibaba.nacos.common.http.client.handler.AbstractResponseHandler.handle(AbstractResponseHandler.java:43)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:483)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:167)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-07-15 21:51:28,285 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:530] - request 192.168.101.65:8848 failed.
+ErrCode:500, ErrMsg:connect timed out
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:618)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:167)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:499)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:594)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:734)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1607)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at com.alibaba.nacos.common.http.client.response.JdkHttpClientResponse.getStatusCode(JdkHttpClientResponse.java:79)
+	at com.alibaba.nacos.common.http.client.handler.AbstractResponseHandler.handle(AbstractResponseHandler.java:43)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:483)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	... 11 more
+2023-07-15 21:51:28,286 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.101.65:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=xuecheng-plus-project%40%40gateway&namespaceId=dev402&port=63010&clusterName=DEFAULT&ip=192.168.101.1, body: {}
+2023-07-15 21:51:28,270 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][ServerHttpAgent.java:169] - [NACOS SocketTimeoutException httpPost] currentServerAddr: http://192.168.101.65:8848， err : connect timed out
+2023-07-15 21:51:28,270 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:617] - [NA] failed to request
+java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:499)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:594)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:734)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1607)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at com.alibaba.nacos.common.http.client.response.JdkHttpClientResponse.getStatusCode(JdkHttpClientResponse.java:79)
+	at com.alibaba.nacos.common.http.client.handler.AbstractResponseHandler.handle(AbstractResponseHandler.java:43)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:483)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:167)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-07-15 21:51:28,282 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][ServerHttpAgent.java:189] - no available server, currentServerAddr : http://192.168.101.65:8848
+2023-07-15 21:51:28,201 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:617] - [NA] failed to request
+java.net.NoRouteToHostException: No route to host: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:499)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:594)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:278)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:375)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:393)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1240)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1061)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:995)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:167)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-07-15 21:51:28,207 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:530] - request 192.168.101.65:8848 failed.
+ErrCode:500, ErrMsg:No route to host: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:618)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:167)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.NoRouteToHostException: No route to host: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:499)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:594)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:278)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:375)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:393)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1240)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1061)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:995)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	... 11 more
+2023-07-15 21:51:28,215 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.101.65:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=xuecheng-plus-project%40%40media-api&namespaceId=dev402&port=63050&clusterName=DEFAULT&ip=192.168.101.1, body: {}
+2023-07-15 21:51:28,270 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][ServerHttpAgent.java:169] - [NACOS SocketTimeoutException httpPost] currentServerAddr: http://192.168.101.65:8848， err : connect timed out
+2023-07-15 21:51:28,270 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][ServerHttpAgent.java:189] - no available server, currentServerAddr : http://192.168.101.65:8848
+2023-07-15 21:51:28,271 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][ClientWorker.java:393] - [fixed-192.168.101.65_8848-dev402] [check-update] get changed dataId exception
+java.net.ConnectException: no available server, currentServerAddr : http://192.168.101.65:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-07-15 21:51:28,271 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][ClientWorker.java:580] - longPolling error : 
+java.net.ConnectException: no available server, currentServerAddr : http://192.168.101.65:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-07-15 21:51:28,282 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][ClientWorker.java:393] - [fixed-192.168.101.65_8848-dev402] [check-update] get changed dataId exception
+java.net.ConnectException: no available server, currentServerAddr : http://192.168.101.65:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-07-15 21:51:28,282 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][ClientWorker.java:580] - longPolling error : 
+java.net.ConnectException: no available server, currentServerAddr : http://192.168.101.65:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-07-15 21:51:28,285 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:530] - request 192.168.101.65:8848 failed.
+ErrCode:500, ErrMsg:connect timed out
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:618)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:167)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:499)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:594)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:734)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1607)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at com.alibaba.nacos.common.http.client.response.JdkHttpClientResponse.getStatusCode(JdkHttpClientResponse.java:79)
+	at com.alibaba.nacos.common.http.client.handler.AbstractResponseHandler.handle(AbstractResponseHandler.java:43)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:483)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	... 11 more
+2023-07-15 21:51:28,286 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.101.65:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=xuecheng-plus-project%40%40gateway&namespaceId=dev402&port=63010&clusterName=DEFAULT&ip=192.168.101.1, body: {}
+2023-07-15 21:51:28,270 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][ServerHttpAgent.java:169] - [NACOS SocketTimeoutException httpPost] currentServerAddr: http://192.168.101.65:8848， err : connect timed out
+2023-07-15 21:51:28,270 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][ServerHttpAgent.java:189] - no available server, currentServerAddr : http://192.168.101.65:8848
+2023-07-15 21:51:28,271 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][ClientWorker.java:393] - [fixed-192.168.101.65_8848-dev402] [check-update] get changed dataId exception
+java.net.ConnectException: no available server, currentServerAddr : http://192.168.101.65:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-07-15 21:51:28,272 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][ClientWorker.java:580] - longPolling error : 
+java.net.ConnectException: no available server, currentServerAddr : http://192.168.101.65:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-07-15 21:51:28,501 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40media-api&udpPort=54261&clusters=DEFAULT, body: {}
+2023-07-15 21:51:28,501 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40media-api&udpPort=54261&clusters=DEFAULT, body: {}
+2023-07-15 21:51:28,562 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] dev402 sending beat to server: BeatInfo{port=63040, ip='192.168.101.1', weight=1.0, serviceName='xuecheng-plus-project@@content-api', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2023-07-15 21:51:28,562 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.101.65:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=xuecheng-plus-project%40%40content-api&namespaceId=dev402&port=63040&clusterName=DEFAULT&ip=192.168.101.1, body: {}
+2023-07-15 21:51:28,562 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] dev402 sending beat to server: BeatInfo{port=63040, ip='192.168.101.1', weight=1.0, serviceName='xuecheng-plus-project@@content-api', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2023-07-15 21:51:28,562 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.101.65:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=xuecheng-plus-project%40%40content-api&namespaceId=dev402&port=63040&clusterName=DEFAULT&ip=192.168.101.1, body: {}
+2023-07-15 21:51:28,766 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40gateway&udpPort=54024&clusters=DEFAULT, body: {}
+2023-07-15 21:51:28,766 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40gateway&udpPort=54024&clusters=DEFAULT, body: {}
+2023-07-15 21:51:28,766 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40content-api&udpPort=54024&clusters=, body: {}
+2023-07-15 21:51:28,766 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40content-api&udpPort=54024&clusters=, body: {}
+2023-07-15 21:51:28,767 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40media-api&udpPort=54024&clusters=, body: {}
+2023-07-15 21:51:28,767 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40media-api&udpPort=54024&clusters=, body: {}
+2023-07-15 21:51:28,781 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@media-api -> [{"instanceId":"192.168.101.1#63050#DEFAULT#xuecheng-plus-project@@media-api","ip":"192.168.101.1","port":63050,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@media-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:28,782 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@663aa292 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@355c94be
+2023-07-15 21:51:28,782 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@content-api -> [{"instanceId":"192.168.101.1#63040#DEFAULT#xuecheng-plus-project@@content-api","ip":"192.168.101.1","port":63040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@content-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:28,782 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@686f5131 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@355c94be
+2023-07-15 21:51:28,781 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@media-api -> [{"instanceId":"192.168.101.1#63050#DEFAULT#xuecheng-plus-project@@media-api","ip":"192.168.101.1","port":63050,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@media-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:28,782 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@663aa292 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@355c94be
+2023-07-15 21:51:28,782 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@content-api -> [{"instanceId":"192.168.101.1#63040#DEFAULT#xuecheng-plus-project@@content-api","ip":"192.168.101.1","port":63040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@content-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:28,782 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@686f5131 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@355c94be
+2023-07-15 21:51:28,783 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@media-api -> []
+2023-07-15 21:51:28,783 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@media-api -> []
+2023-07-15 21:51:28,783 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@content-api -> []
+2023-07-15 21:51:28,783 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@content-api -> []
+2023-07-15 21:51:28,885 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-07-15 21:51:28,885 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-07-15 21:51:29,051 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@media-api\",\"name\":\"xuecheng-plus-project@@media-api\",\"cacheMillis\":10000,\"lastRefTime\":1689429089045,\"checksum\":\"e581954b7428757802b5a9598d3a399d\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":22073671474980} from /192.168.1.11
+2023-07-15 21:51:29,051 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@media-api\",\"name\":\"xuecheng-plus-project@@media-api\",\"cacheMillis\":10000,\"lastRefTime\":1689429089045,\"checksum\":\"e581954b7428757802b5a9598d3a399d\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":22073671474980} from /192.168.1.11
+2023-07-15 21:51:29,051 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@media-api\",\"name\":\"xuecheng-plus-project@@media-api\",\"cacheMillis\":10000,\"lastRefTime\":1689429089049,\"checksum\":\"e581954b7428757802b5a9598d3a399d\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":22073671474980} from /192.168.1.11
+2023-07-15 21:51:29,052 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@media-api@@DEFAULT -> [{"instanceId":"192.168.101.1#63050#DEFAULT#xuecheng-plus-project@@media-api","ip":"192.168.101.1","port":63050,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@media-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:29,052 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@media-api@@DEFAULT -> [{"instanceId":"192.168.101.1#63050#DEFAULT#xuecheng-plus-project@@media-api","ip":"192.168.101.1","port":63050,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@media-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:29,051 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@media-api\",\"name\":\"xuecheng-plus-project@@media-api\",\"cacheMillis\":10000,\"lastRefTime\":1689429089049,\"checksum\":\"e581954b7428757802b5a9598d3a399d\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":22073671474980} from /192.168.1.11
+2023-07-15 21:51:29,053 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@402561ad will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@3dfe92ef
+2023-07-15 21:51:29,053 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@402561ad will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@3dfe92ef
+2023-07-15 21:51:29,054 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@content-api\",\"name\":\"xuecheng-plus-project@@content-api\",\"cacheMillis\":10000,\"lastRefTime\":1689429089052,\"checksum\":\"b9882353305a55afb8e2c53bb9424188\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":22073677542114} from /192.168.1.11
+2023-07-15 21:51:29,054 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@content-api\",\"name\":\"xuecheng-plus-project@@content-api\",\"cacheMillis\":10000,\"lastRefTime\":1689429089052,\"checksum\":\"b9882353305a55afb8e2c53bb9424188\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":22073677542114} from /192.168.1.11
+2023-07-15 21:51:29,055 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@media-api@@DEFAULT -> []
+2023-07-15 21:51:29,055 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@media-api@@DEFAULT -> []
+2023-07-15 21:51:29,873 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40content-api&udpPort=58475&clusters=DEFAULT, body: {}
+2023-07-15 21:51:29,873 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40content-api&udpPort=58475&clusters=DEFAULT, body: {}
+2023-07-15 21:51:29,890 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@content-api@@DEFAULT -> [{"instanceId":"192.168.101.1#63040#DEFAULT#xuecheng-plus-project@@content-api","ip":"192.168.101.1","port":63040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@content-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-07-15 21:51:29,890 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@content-api@@DEFAULT -> [{"instanceId":"192.168.101.1#63040#DEFAULT#xuecheng-plus-project@@content-api","ip":"192.168.101.1","port":63040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@content-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-07-15 21:51:29,892 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@3d2ebc75 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@19b5214b
+2023-07-15 21:51:29,892 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@3d2ebc75 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@19b5214b
+2023-07-15 21:51:29,894 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@content-api@@DEFAULT -> []
+2023-07-15 21:51:29,894 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@content-api@@DEFAULT -> []
+2023-07-15 21:51:29,997 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.101.65:8848]
+2023-07-15 21:51:29,997 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.101.65:8848]
+2023-07-15 21:51:30,044 DEBUG [xxl-job, executor ExecutorRegistryThread][ExecutorRegistryThread.java:51] - >>>>>>>>>>> xxl-job registry success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='media-process-service', registryValue='http://192.168.1.11:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2023-07-15 21:51:30,044 DEBUG [xxl-job, executor ExecutorRegistryThread][ExecutorRegistryThread.java:51] - >>>>>>>>>>> xxl-job registry success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='media-process-service', registryValue='http://192.168.1.11:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2023-07-15 21:51:30,279 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.101.65:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=swagger-dev.yamlxuecheng-plus-commonc78ef8867ebc75a68888a4ad15317919dev402content-api.yamlxuecheng-plus-projectdev402content-service-dev.yamlxuecheng-plus-project76a509cb58eebed87f213d77d5f8c87cdev402logging-dev.yamlxuecheng-plus-common55ff840838a1012dede124c2534b7ac7dev402content-api-dev.yamlxuecheng-plus-project78d20bde0abd062c85fa55db08756cbfdev402content-apixuecheng-plus-projectdev402, tenant=dev402}
+2023-07-15 21:51:30,279 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.101.65:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=swagger-dev.yamlxuecheng-plus-commonc78ef8867ebc75a68888a4ad15317919dev402content-api.yamlxuecheng-plus-projectdev402content-service-dev.yamlxuecheng-plus-project76a509cb58eebed87f213d77d5f8c87cdev402logging-dev.yamlxuecheng-plus-common55ff840838a1012dede124c2534b7ac7dev402content-api-dev.yamlxuecheng-plus-project78d20bde0abd062c85fa55db08756cbfdev402content-apixuecheng-plus-projectdev402, tenant=dev402}
+2023-07-15 21:51:30,279 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@52883c45]
+2023-07-15 21:51:30,279 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.101.65:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=swagger-dev.yamlxuecheng-plus-commonc78ef8867ebc75a68888a4ad15317919dev402media-api-dev.yamlxuecheng-plus-project287627759cbadca8957f0231747b973bdev402media-api.yamlxuecheng-plus-projectdev402media-apixuecheng-plus-projectdev402logging-dev.yamlxuecheng-plus-common55ff840838a1012dede124c2534b7ac7dev402media-service-dev.yamlxuecheng-plus-project603803a55d40abc71fc60f35a6e1ec2ddev402, tenant=dev402}
+2023-07-15 21:51:30,279 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@52883c45]
+2023-07-15 21:51:30,279 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.101.65:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=swagger-dev.yamlxuecheng-plus-commonc78ef8867ebc75a68888a4ad15317919dev402media-api-dev.yamlxuecheng-plus-project287627759cbadca8957f0231747b973bdev402media-api.yamlxuecheng-plus-projectdev402media-apixuecheng-plus-projectdev402logging-dev.yamlxuecheng-plus-common55ff840838a1012dede124c2534b7ac7dev402media-service-dev.yamlxuecheng-plus-project603803a55d40abc71fc60f35a6e1ec2ddev402, tenant=dev402}
+2023-07-15 21:51:30,280 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@38d6b283]
+2023-07-15 21:51:30,280 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@38d6b283]
+2023-07-15 21:51:30,281 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.101.65:8848]
+2023-07-15 21:51:30,281 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.101.65:8848]
+2023-07-15 21:51:30,295 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.101.65:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=gatewayxuecheng-plus-projectdev402gateway.yamlxuecheng-plus-projectdev402logging-dev.yamlxuecheng-plus-common55ff840838a1012dede124c2534b7ac7dev402gateway-dev.yamlxuecheng-plus-project0aa8d36f8c1ac49485e133f43f60481bdev402, tenant=dev402}
+2023-07-15 21:51:30,295 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.101.65:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=gatewayxuecheng-plus-projectdev402gateway.yamlxuecheng-plus-projectdev402logging-dev.yamlxuecheng-plus-common55ff840838a1012dede124c2534b7ac7dev402gateway-dev.yamlxuecheng-plus-project0aa8d36f8c1ac49485e133f43f60481bdev402, tenant=dev402}
+2023-07-15 21:51:30,295 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@5e9852a0]
+2023-07-15 21:51:30,295 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev402][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@5e9852a0]
+2023-07-15 21:51:30,420 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.101.65:8848]
+2023-07-15 21:51:30,420 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.101.65:8848]
+2023-07-15 21:51:30,791 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40content-api&udpPort=54024&clusters=, body: {}
+2023-07-15 21:51:30,791 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40content-api&udpPort=54024&clusters=, body: {}
+2023-07-15 21:51:30,791 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40media-api&udpPort=54024&clusters=, body: {}
+2023-07-15 21:51:30,791 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40media-api&udpPort=54024&clusters=, body: {}
+2023-07-15 21:51:30,900 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:271] - RouteDefinition content-api applying {_genkey_0=/content/**} to Path
+2023-07-15 21:51:30,900 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:271] - RouteDefinition content-api applying {_genkey_0=/content/**} to Path
+2023-07-15 21:51:30,901 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:162] - RouteDefinition matched: content-api
+2023-07-15 21:51:30,901 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:162] - RouteDefinition matched: content-api
+2023-07-15 21:51:30,901 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:271] - RouteDefinition system-api applying {_genkey_0=/system/**} to Path
+2023-07-15 21:51:30,901 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:271] - RouteDefinition system-api applying {_genkey_0=/system/**} to Path
+2023-07-15 21:51:30,903 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:162] - RouteDefinition matched: system-api
+2023-07-15 21:51:30,903 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:162] - RouteDefinition matched: system-api
+2023-07-15 21:51:30,903 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:271] - RouteDefinition media-api applying {_genkey_0=/media/**} to Path
+2023-07-15 21:51:30,903 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:271] - RouteDefinition media-api applying {_genkey_0=/media/**} to Path
+2023-07-15 21:51:30,904 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:162] - RouteDefinition matched: media-api
+2023-07-15 21:51:30,904 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:162] - RouteDefinition matched: media-api
+2023-07-15 21:51:30,904 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:271] - RouteDefinition search-service applying {_genkey_0=/search/**} to Path
+2023-07-15 21:51:30,904 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:271] - RouteDefinition search-service applying {_genkey_0=/search/**} to Path
+2023-07-15 21:51:30,905 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:162] - RouteDefinition matched: search-service
+2023-07-15 21:51:30,905 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:162] - RouteDefinition matched: search-service
+2023-07-15 21:51:30,906 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:271] - RouteDefinition auth-service applying {_genkey_0=/auth/**} to Path
+2023-07-15 21:51:30,906 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:271] - RouteDefinition auth-service applying {_genkey_0=/auth/**} to Path
+2023-07-15 21:51:30,906 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:162] - RouteDefinition matched: auth-service
+2023-07-15 21:51:30,906 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:162] - RouteDefinition matched: auth-service
+2023-07-15 21:51:30,907 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:271] - RouteDefinition checkcode applying {_genkey_0=/checkcode/**} to Path
+2023-07-15 21:51:30,907 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:271] - RouteDefinition checkcode applying {_genkey_0=/checkcode/**} to Path
+2023-07-15 21:51:30,907 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:162] - RouteDefinition matched: checkcode
+2023-07-15 21:51:30,907 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:162] - RouteDefinition matched: checkcode
+2023-07-15 21:51:30,908 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:271] - RouteDefinition learning-api applying {_genkey_0=/learning/**} to Path
+2023-07-15 21:51:30,908 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:271] - RouteDefinition learning-api applying {_genkey_0=/learning/**} to Path
+2023-07-15 21:51:30,908 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:162] - RouteDefinition matched: learning-api
+2023-07-15 21:51:30,908 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:162] - RouteDefinition matched: learning-api
+2023-07-15 21:51:30,908 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:271] - RouteDefinition orders-api applying {_genkey_0=/orders/**} to Path
+2023-07-15 21:51:30,908 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:271] - RouteDefinition orders-api applying {_genkey_0=/orders/**} to Path
+2023-07-15 21:51:30,909 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:162] - RouteDefinition matched: orders-api
+2023-07-15 21:51:30,909 DEBUG [Nacos-Watch-Task-Scheduler-1][RouteDefinitionRouteLocator.java:162] - RouteDefinition matched: orders-api
+2023-07-15 21:51:31,899 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40content-api&udpPort=58475&clusters=DEFAULT, body: {}
+2023-07-15 21:51:31,899 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40content-api&udpPort=58475&clusters=DEFAULT, body: {}
+2023-07-15 21:51:32,560 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-07-15 21:51:32,560 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-07-15 21:51:32,880 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-07-15 21:51:32,880 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-07-15 21:51:33,355 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] dev402 sending beat to server: BeatInfo{port=63050, ip='192.168.101.1', weight=1.0, serviceName='xuecheng-plus-project@@media-api', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2023-07-15 21:51:33,355 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] dev402 sending beat to server: BeatInfo{port=63050, ip='192.168.101.1', weight=1.0, serviceName='xuecheng-plus-project@@media-api', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2023-07-15 21:51:33,355 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.101.65:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=xuecheng-plus-project%40%40media-api&namespaceId=dev402&port=63050&clusterName=DEFAULT&ip=192.168.101.1, body: {}
+2023-07-15 21:51:33,355 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.101.65:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=xuecheng-plus-project%40%40media-api&namespaceId=dev402&port=63050&clusterName=DEFAULT&ip=192.168.101.1, body: {}
+2023-07-15 21:51:33,359 INFO [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:230] - [REGISTER-SERVICE] dev402 registering service xuecheng-plus-project@@media-api with instance: Instance{instanceId='null', ip='192.168.101.1', port=63050, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='xuecheng-plus-project@@media-api', metadata={preserved.register.source=SPRING_CLOUD}}
+2023-07-15 21:51:33,359 INFO [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:230] - [REGISTER-SERVICE] dev402 registering service xuecheng-plus-project@@media-api with instance: Instance{instanceId='null', ip='192.168.101.1', port=63050, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='xuecheng-plus-project@@media-api', metadata={preserved.register.source=SPRING_CLOUD}}
+2023-07-15 21:51:33,359 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.101.65:8848/nacos/v1/ns/instance?app=unknown&groupName=xuecheng-plus-project&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&namespaceId=dev402&port=63050&enable=true&healthy=true&clusterName=DEFAULT&ip=192.168.101.1&weight=1.0&ephemeral=true&serviceName=xuecheng-plus-project%40%40media-api, body: {}
+2023-07-15 21:51:33,359 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.101.65:8848/nacos/v1/ns/instance?app=unknown&groupName=xuecheng-plus-project&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&namespaceId=dev402&port=63050&enable=true&healthy=true&clusterName=DEFAULT&ip=192.168.101.1&weight=1.0&ephemeral=true&serviceName=xuecheng-plus-project%40%40media-api, body: {}
+2023-07-15 21:51:33,678 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] dev402 sending beat to server: BeatInfo{port=63010, ip='192.168.101.1', weight=1.0, serviceName='xuecheng-plus-project@@gateway', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2023-07-15 21:51:33,678 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] dev402 sending beat to server: BeatInfo{port=63010, ip='192.168.101.1', weight=1.0, serviceName='xuecheng-plus-project@@gateway', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2023-07-15 21:51:33,679 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.101.65:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=xuecheng-plus-project%40%40gateway&namespaceId=dev402&port=63010&clusterName=DEFAULT&ip=192.168.101.1, body: {}
+2023-07-15 21:51:33,679 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.101.65:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=xuecheng-plus-project%40%40gateway&namespaceId=dev402&port=63010&clusterName=DEFAULT&ip=192.168.101.1, body: {}
+2023-07-15 21:51:33,693 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] dev402 sending beat to server: BeatInfo{port=63040, ip='192.168.101.1', weight=1.0, serviceName='xuecheng-plus-project@@content-api', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2023-07-15 21:51:33,693 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] dev402 sending beat to server: BeatInfo{port=63040, ip='192.168.101.1', weight=1.0, serviceName='xuecheng-plus-project@@content-api', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2023-07-15 21:51:33,694 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.101.65:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=xuecheng-plus-project%40%40content-api&namespaceId=dev402&port=63040&clusterName=DEFAULT&ip=192.168.101.1, body: {}
+2023-07-15 21:51:33,694 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.101.65:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=xuecheng-plus-project%40%40content-api&namespaceId=dev402&port=63040&clusterName=DEFAULT&ip=192.168.101.1, body: {}
+2023-07-15 21:51:33,698 INFO [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:230] - [REGISTER-SERVICE] dev402 registering service xuecheng-plus-project@@content-api with instance: Instance{instanceId='null', ip='192.168.101.1', port=63040, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='xuecheng-plus-project@@content-api', metadata={preserved.register.source=SPRING_CLOUD}}
+2023-07-15 21:51:33,698 INFO [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:230] - [REGISTER-SERVICE] dev402 registering service xuecheng-plus-project@@content-api with instance: Instance{instanceId='null', ip='192.168.101.1', port=63040, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='xuecheng-plus-project@@content-api', metadata={preserved.register.source=SPRING_CLOUD}}
+2023-07-15 21:51:33,699 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.101.65:8848/nacos/v1/ns/instance?app=unknown&groupName=xuecheng-plus-project&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&namespaceId=dev402&port=63040&enable=true&healthy=true&clusterName=DEFAULT&ip=192.168.101.1&weight=1.0&ephemeral=true&serviceName=xuecheng-plus-project%40%40content-api, body: {}
+2023-07-15 21:51:33,699 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.101.65:8848/nacos/v1/ns/instance?app=unknown&groupName=xuecheng-plus-project&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&namespaceId=dev402&port=63040&enable=true&healthy=true&clusterName=DEFAULT&ip=192.168.101.1&weight=1.0&ephemeral=true&serviceName=xuecheng-plus-project%40%40content-api, body: {}
+2023-07-15 21:51:33,891 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-07-15 21:51:33,891 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-07-15 21:51:34,395 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.101.1\",\"port\":63050,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.101.1#63050#DEFAULT#xuecheng-plus-project@@media-api\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"xuecheng-plus-project@@media-api\",\"ephemeral\":true}],\"dom\":\"xuecheng-plus-project@@media-api\",\"name\":\"xuecheng-plus-project@@media-api\",\"cacheMillis\":10000,\"lastRefTime\":1689429094394,\"checksum\":\"5626e57dd975cd619c6a2d2afff18d24\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":22079019615790} from /192.168.1.11
+2023-07-15 21:51:34,395 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.101.1\",\"port\":63050,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.101.1#63050#DEFAULT#xuecheng-plus-project@@media-api\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"xuecheng-plus-project@@media-api\",\"ephemeral\":true}],\"dom\":\"xuecheng-plus-project@@media-api\",\"name\":\"xuecheng-plus-project@@media-api\",\"cacheMillis\":10000,\"lastRefTime\":1689429094394,\"checksum\":\"5626e57dd975cd619c6a2d2afff18d24\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":22079019615790} from /192.168.1.11
+2023-07-15 21:51:34,395 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:232] - new ips(1) service: xuecheng-plus-project@@media-api@@DEFAULT -> [{"instanceId":"192.168.101.1#63050#DEFAULT#xuecheng-plus-project@@media-api","ip":"192.168.101.1","port":63050,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@media-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:34,395 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.101.1\",\"port\":63050,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.101.1#63050#DEFAULT#xuecheng-plus-project@@media-api\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"xuecheng-plus-project@@media-api\",\"ephemeral\":true}],\"dom\":\"xuecheng-plus-project@@media-api\",\"name\":\"xuecheng-plus-project@@media-api\",\"cacheMillis\":10000,\"lastRefTime\":1689429094394,\"checksum\":\"5626e57dd975cd619c6a2d2afff18d24\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"metadata\":{}}","lastRefTime":22079019615790} from /192.168.1.11
+2023-07-15 21:51:34,395 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:232] - new ips(1) service: xuecheng-plus-project@@media-api@@DEFAULT -> [{"instanceId":"192.168.101.1#63050#DEFAULT#xuecheng-plus-project@@media-api","ip":"192.168.101.1","port":63050,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@media-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:34,395 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.101.1\",\"port\":63050,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.101.1#63050#DEFAULT#xuecheng-plus-project@@media-api\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"xuecheng-plus-project@@media-api\",\"ephemeral\":true}],\"dom\":\"xuecheng-plus-project@@media-api\",\"name\":\"xuecheng-plus-project@@media-api\",\"cacheMillis\":10000,\"lastRefTime\":1689429094394,\"checksum\":\"5626e57dd975cd619c6a2d2afff18d24\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"metadata\":{}}","lastRefTime":22079019615790} from /192.168.1.11
+2023-07-15 21:51:34,395 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@767a4c52 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@3dfe92ef
+2023-07-15 21:51:34,395 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@767a4c52 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@3dfe92ef
+2023-07-15 21:51:34,396 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:232] - new ips(1) service: xuecheng-plus-project@@media-api -> [{"instanceId":"192.168.101.1#63050#DEFAULT#xuecheng-plus-project@@media-api","ip":"192.168.101.1","port":63050,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@media-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:34,396 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:232] - new ips(1) service: xuecheng-plus-project@@media-api -> [{"instanceId":"192.168.101.1#63050#DEFAULT#xuecheng-plus-project@@media-api","ip":"192.168.101.1","port":63050,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@media-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:34,396 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@5f07fe7c will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@355c94be
+2023-07-15 21:51:34,396 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@5f07fe7c will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@355c94be
+2023-07-15 21:51:34,396 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(1) service: xuecheng-plus-project@@media-api@@DEFAULT -> [{"instanceId":"192.168.101.1#63050#DEFAULT#xuecheng-plus-project@@media-api","ip":"192.168.101.1","port":63050,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@media-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:34,396 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(1) service: xuecheng-plus-project@@media-api@@DEFAULT -> [{"instanceId":"192.168.101.1#63050#DEFAULT#xuecheng-plus-project@@media-api","ip":"192.168.101.1","port":63050,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@media-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:34,399 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(1) service: xuecheng-plus-project@@media-api -> [{"instanceId":"192.168.101.1#63050#DEFAULT#xuecheng-plus-project@@media-api","ip":"192.168.101.1","port":63050,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@media-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:34,399 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(1) service: xuecheng-plus-project@@media-api -> [{"instanceId":"192.168.101.1#63050#DEFAULT#xuecheng-plus-project@@media-api","ip":"192.168.101.1","port":63050,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@media-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:34,705 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.101.1\",\"port\":63040,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.101.1#63040#DEFAULT#xuecheng-plus-project@@content-api\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"xuecheng-plus-project@@content-api\",\"ephemeral\":true}],\"dom\":\"xuecheng-plus-project@@content-api\",\"name\":\"xuecheng-plus-project@@content-api\",\"cacheMillis\":10000,\"lastRefTime\":1689429094704,\"checksum\":\"6ddc50e69ca5f8683f9cce4a29c12cbd\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"metadata\":{}}","lastRefTime":22079330348596} from /192.168.1.11
+2023-07-15 21:51:34,705 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.101.1\",\"port\":63040,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.101.1#63040#DEFAULT#xuecheng-plus-project@@content-api\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"xuecheng-plus-project@@content-api\",\"ephemeral\":true}],\"dom\":\"xuecheng-plus-project@@content-api\",\"name\":\"xuecheng-plus-project@@content-api\",\"cacheMillis\":10000,\"lastRefTime\":1689429094704,\"checksum\":\"6ddc50e69ca5f8683f9cce4a29c12cbd\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"metadata\":{}}","lastRefTime":22079330348596} from /192.168.1.11
+2023-07-15 21:51:34,705 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:232] - new ips(1) service: xuecheng-plus-project@@content-api -> [{"instanceId":"192.168.101.1#63040#DEFAULT#xuecheng-plus-project@@content-api","ip":"192.168.101.1","port":63040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@content-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:34,705 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:232] - new ips(1) service: xuecheng-plus-project@@content-api -> [{"instanceId":"192.168.101.1#63040#DEFAULT#xuecheng-plus-project@@content-api","ip":"192.168.101.1","port":63040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@content-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:34,706 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@3bb752d2 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@355c94be
+2023-07-15 21:51:34,706 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@3bb752d2 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@355c94be
+2023-07-15 21:51:34,706 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(1) service: xuecheng-plus-project@@content-api -> [{"instanceId":"192.168.101.1#63040#DEFAULT#xuecheng-plus-project@@content-api","ip":"192.168.101.1","port":63040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@content-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:34,706 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(1) service: xuecheng-plus-project@@content-api -> [{"instanceId":"192.168.101.1#63040#DEFAULT#xuecheng-plus-project@@content-api","ip":"192.168.101.1","port":63040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@content-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-07-15 21:51:34,707 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.101.1\",\"port\":63040,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.101.1#63040#DEFAULT#xuecheng-plus-project@@content-api\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"xuecheng-plus-project@@content-api\",\"ephemeral\":true}],\"dom\":\"xuecheng-plus-project@@content-api\",\"name\":\"xuecheng-plus-project@@content-api\",\"cacheMillis\":10000,\"lastRefTime\":1689429094705,\"checksum\":\"6ddc50e69ca5f8683f9cce4a29c12cbd\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":22079330348596} from /192.168.1.11
+2023-07-15 21:51:34,707 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.101.1\",\"port\":63040,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.101.1#63040#DEFAULT#xuecheng-plus-project@@content-api\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"xuecheng-plus-project@@content-api\",\"ephemeral\":true}],\"dom\":\"xuecheng-plus-project@@content-api\",\"name\":\"xuecheng-plus-project@@content-api\",\"cacheMillis\":10000,\"lastRefTime\":1689429094705,\"checksum\":\"6ddc50e69ca5f8683f9cce4a29c12cbd\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":22079330348596} from /192.168.1.11
+2023-07-15 21:51:34,707 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:232] - new ips(1) service: xuecheng-plus-project@@content-api@@DEFAULT -> [{"instanceId":"192.168.101.1#63040#DEFAULT#xuecheng-plus-project@@content-api","ip":"192.168.101.1","port":63040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@content-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-07-15 21:51:34,707 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:232] - new ips(1) service: xuecheng-plus-project@@content-api@@DEFAULT -> [{"instanceId":"192.168.101.1#63040#DEFAULT#xuecheng-plus-project@@content-api","ip":"192.168.101.1","port":63040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@content-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-07-15 21:51:34,708 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@6f0216b0 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@19b5214b
+2023-07-15 21:51:34,708 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@6f0216b0 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@19b5214b
+2023-07-15 21:51:34,708 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(1) service: xuecheng-plus-project@@content-api@@DEFAULT -> [{"instanceId":"192.168.101.1#63040#DEFAULT#xuecheng-plus-project@@content-api","ip":"192.168.101.1","port":63040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@content-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-07-15 21:51:34,708 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(1) service: xuecheng-plus-project@@content-api@@DEFAULT -> [{"instanceId":"192.168.101.1#63040#DEFAULT#xuecheng-plus-project@@content-api","ip":"192.168.101.1","port":63040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@content-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-07-15 21:51:34,809 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40content-api&udpPort=54024&clusters=, body: {}
+2023-07-15 21:51:34,809 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40content-api&udpPort=54024&clusters=, body: {}
+2023-07-15 21:51:34,809 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40media-api&udpPort=54024&clusters=, body: {}
+2023-07-15 21:51:34,809 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40media-api&udpPort=54024&clusters=, body: {}
+2023-07-15 21:51:35,903 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40content-api&udpPort=58475&clusters=DEFAULT, body: {}
+2023-07-15 21:51:35,903 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=192.168.1.11&serviceName=xuecheng-plus-project%40%40content-api&udpPort=58475&clusters=DEFAULT, body: {}

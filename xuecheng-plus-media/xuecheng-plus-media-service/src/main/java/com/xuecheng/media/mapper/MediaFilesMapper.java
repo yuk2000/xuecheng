@@ -11,5 +11,4 @@ import com.xuecheng.media.model.po.MediaFiles;
  * @author itcast
  */
 public interface MediaFilesMapper extends BaseMapper<MediaFiles> {
-
 }
