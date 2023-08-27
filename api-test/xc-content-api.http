@@ -7,6 +7,24 @@ Content-Type: application/json
   "courseName": "java",
   "publishStatus": "203001"
 }
-
 <> 2023-06-11T150122.200.json
+
+### 密码模式
+POST {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username=zhangsan&password=123
+
+###校验jwt令牌
+POST {{auth_host}}/auth/oauth/check_token?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2OTAxMDU3MjYsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImVmYmMwNzhlLThhODYtNGM1OS05NTBiLWI0NjIwNTY4YTgyMCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.rHyFOetnMpnd2ADL0_C-uy3VIosHC2HirRH-c8_G7c0
+
+### 密码模式
+POST {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username=t1&password=111111
+
+###密码模式
+POST {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username={"username":"stu1","authType":"password","password":"111111"}
+
+### 申请验证码
+POST {{checkcode_host}}/checkcode/pic
+
+### 校验验证码
+POST {{checkcode_host}}/checkcode/verify?key=checkcode26b8c20997b84c899deb24af1b8d01a8&code=bjje
+
 

@@ -16,6 +16,7 @@
           <entry name="$PROJECT_DIR$/../../../apache-maven-3.8.3/.m2/repository/org/projectlombok/lombok/1.18.8/lombok-1.18.8.jar" />
         </processorPath>
         <module name="xuecheng-plus-message-sdk" />
+        <module name="xuecheng-plus-checkcode" />
         <module name="xuecheng-plus-media-api" />
         <module name="xuecheng-plus-content-service" />
         <module name="xuecheng-plus-search" />
