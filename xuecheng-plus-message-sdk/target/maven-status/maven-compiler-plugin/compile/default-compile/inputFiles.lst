@@ -1,0 +1,10 @@
+D:\Java\Git\xuecheng-github\xuecheng-plus-message-sdk\src\main\java\com\xuecheng\messagesdk\config\MybatisPlusConfig.java
+D:\Java\Git\xuecheng-github\xuecheng-plus-message-sdk\src\main\java\com\xuecheng\messagesdk\service\MessageProcessAbstract.java
+D:\Java\Git\xuecheng-github\xuecheng-plus-message-sdk\src\main\java\com\xuecheng\messagesdk\mapper\MqMessageHistoryMapper.java
+D:\Java\Git\xuecheng-github\xuecheng-plus-message-sdk\src\main\java\com\xuecheng\messagesdk\service\MqMessageHistoryService.java
+D:\Java\Git\xuecheng-github\xuecheng-plus-message-sdk\src\main\java\com\xuecheng\messagesdk\mapper\MqMessageMapper.java
+D:\Java\Git\xuecheng-github\xuecheng-plus-message-sdk\src\main\java\com\xuecheng\messagesdk\model\po\MqMessage.java
+D:\Java\Git\xuecheng-github\xuecheng-plus-message-sdk\src\main\java\com\xuecheng\messagesdk\model\po\MqMessageHistory.java
+D:\Java\Git\xuecheng-github\xuecheng-plus-message-sdk\src\main\java\com\xuecheng\messagesdk\service\MqMessageService.java
+D:\Java\Git\xuecheng-github\xuecheng-plus-message-sdk\src\main\java\com\xuecheng\messagesdk\service\impl\MqMessageHistoryServiceImpl.java
+D:\Java\Git\xuecheng-github\xuecheng-plus-message-sdk\src\main\java\com\xuecheng\messagesdk\service\impl\MqMessageServiceImpl.java
